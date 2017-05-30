@@ -22,7 +22,7 @@ namespace AccesControlWS
 
         public override string pristup()
         {
-            Console.WriteLine(podaci);
+            Console.WriteLine("Traženi podaci: "+podaci);
             Console.WriteLine("Želite izmjeniti podatke? DA ili NE");
             string odgovor = Console.ReadLine();
 
