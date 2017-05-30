@@ -8,20 +8,21 @@ namespace AccesControlWS
 {
     class Pročitano: RazinaPristupa
     {
-        public Pročitano(RazinaPristupa razina):this(razina.Pristup)
+        public Pročitano(RazinaPristupa razina) : this(razina.podaci, razina.Pristup)
         {
 
         }
 
-        public Pročitano(Pristup razina)
+        public Pročitano(string podaci, Pristup razina)
         {
             this.Pristup = razina;
+            this.podaci = podaci;
         }
 
         public override string pristup()
         {
             promijeniStatus();
-            return podaci;
+            return "";
         }
 
         private void promijeniStatus()

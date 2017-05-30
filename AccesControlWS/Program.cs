@@ -12,7 +12,7 @@ namespace AccesControlWS
         {
 
             Pristup PR = new Pristup();
-
+            
             PR.pristupiPodacima();
         }
     }

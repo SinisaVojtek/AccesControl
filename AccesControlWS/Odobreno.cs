@@ -8,20 +8,21 @@ namespace AccesControlWS
 {
     class Odobreno : RazinaPristupa
     {
-        public Odobreno(RazinaPristupa razina):this(razina.Pristup)
+        public Odobreno(RazinaPristupa razina) : this(razina.podaci, razina.Pristup)
         {
 
         }
 
-        public Odobreno(Pristup razina)
+        public Odobreno(string podaci, Pristup razina)
         {
             this.Pristup = razina;
+            this.podaci = podaci;
         }
 
         public override string pristup()
         {
             promijeniStatus();
-            return podaci;
+            return ("Traženi podaci: "+ podaci);
         }
         
         private void promijeniStatus()

@@ -16,11 +16,12 @@ namespace AccesControlWS
             set { PR = value; }
         }
 
-        private string Podaci = "Povjerljivi podaci: asdkfdčajklgačjksdčfjačk";
+        private string Podaci="Početna vrijednost.";
 
         public string podaci
         {
             get { return Podaci; }
+            set { this.Podaci = value ?? string.Empty; }
         }
 
         public abstract string pristup();

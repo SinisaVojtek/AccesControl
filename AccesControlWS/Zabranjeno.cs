@@ -8,14 +8,15 @@ namespace AccesControlWS
 {
     class Zabranjeno: RazinaPristupa
     {
-        public Zabranjeno(RazinaPristupa razina):this(razina.Pristup)
+        public Zabranjeno(RazinaPristupa razina) : this(razina.podaci, razina.Pristup)
         {
 
         }
 
-        public Zabranjeno(Pristup razina)
+        public Zabranjeno(string podaci, Pristup razina)
         {
             this.Pristup = razina;
+            this.podaci = podaci;
         }
 
         public override string pristup()
@@ -23,18 +24,27 @@ namespace AccesControlWS
             Console.WriteLine("Za pristup podacima unesite vaš username: ");
             string username = Console.ReadLine();
 
-            if (username.Trim() == "Sinisa")
-            {
-                promijeniStatus();
+           
+            if(promijeniStatus(username.Trim()))
                 return ("pristup odobren!");
-            }
+         
 
             return "Pristup nije dozvoljen.";
         }
 
-        private void promijeniStatus()
+        private bool promijeniStatus(string username)
         {
-            Pristup.trenutniStatus = new Odobreno(this);
+            if (username == "Sinisa")
+            {
+                Pristup.trenutniStatus = new Odobreno(this);
+                return true;
+            }
+            else if (username == "Damir")
+            {
+                Pristup.trenutniStatus = new Promjeni(this);
+                return true;
+            }
+            return false;
         }
     }
 }

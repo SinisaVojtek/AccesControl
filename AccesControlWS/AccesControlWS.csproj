@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pristup.cs" />
+    <Compile Include="Promjeni.cs" />
     <Compile Include="RazinaPristupa.cs" />
     <Compile Include="Odobreno.cs" />
     <Compile Include="Program.cs" />

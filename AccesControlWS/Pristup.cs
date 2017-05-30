@@ -12,7 +12,7 @@ namespace AccesControlWS
 
         public Pristup()
         {
-            trenutniStatus = new Zabranjeno(this);
+            trenutniStatus = new Zabranjeno("Početna vrijednost",this);
         }
 
         public void pristupiPodacima()
