@@ -22,7 +22,7 @@ namespace AccesControlWS
         public override string pristup()
         {
             promijeniStatus();
-            return "";
+            return string.Empty;
         }
 
         private void promijeniStatus()

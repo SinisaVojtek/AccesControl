@@ -31,9 +31,14 @@ namespace AccesControlWS
                 Console.WriteLine("Unesite izmjene:");
                 podaci = Console.ReadLine();
                 Console.WriteLine("Podaci uspješno izmjenjeni, nova vrijednost:");
+                promijeniStatus();
+                return ("Traženi podaci: " + podaci);
             }
-            promijeniStatus();
-            return ("Traženi podaci: "+ podaci);
+            else {
+                promijeniStatus();
+                return string.Empty;
+            }
+
         }
 
         private void promijeniStatus()
